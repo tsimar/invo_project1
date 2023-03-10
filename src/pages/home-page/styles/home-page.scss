@@ -1,0 +1,244 @@
+/// Homepage Styles File
+/// Here we import all the Styles files we need for our Homepage.
+/// 
+@import "../../../global-styles/style.scss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Libre+Barcode+128&family=Outfit:wght@400;700&display=swap');
+
+* {
+    font-family: 'DM Sans ';
+    font-weight: 500;
+    color: #ffffff;
+
+}
+
+@mixin flex-center-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+body {
+    background-color: #0F162D;
+}
+
+h1,
+p {
+    margin: 0;
+}
+
+h3 {
+    margin: 16px 0;
+    font-size: 20px;
+    line-height: 24px;
+
+}
+
+
+.home__page-title {
+    width: 343px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 48px;
+
+    & &-h1 {
+        line-height: 40px;
+        letter-spacing: -0.002em;
+        font-size: 32px;
+        width: 343px;
+        font-weight: 500;
+    }
+
+    & &-p {
+        width: 343px;
+        margin: 0 auto;
+        margin-top: 16px;
+        line-height: 24px;
+        font-style: normal;
+        font-family: 'DM Sans';
+        font-weight: 400;
+        font-size: 16px;
+        color: #ffffff;
+
+    }
+
+}
+
+
+.home__page-items {
+    width: 343px;
+    height: 196px;
+    margin: 0 auto;
+    margin-top: 24px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+    color: #ffffff;
+
+}
+
+.items {
+    @include flex-center-all;
+    flex-direction: column;
+    width: 343px;
+    height: 196px;
+
+    border-radius: 20px;
+
+    background-color: #272D42;
+
+    &-div {
+        width: 56px;
+        height: 56px;
+        margin-top: 20px;
+        border-radius: 16px;
+        background-color: #373155;
+        @include flex-center-all;
+
+        & img {
+            width: auto;
+            height: 26px;
+        }
+    }
+
+    & p {
+        color: #ffffff;
+        width: 303px;
+        height: 44px;
+        text-align: center;
+        font-family: 'DM Sans';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        opacity: 50%;
+        margin-bottom: 20px;
+    }
+}
+
+.home__page-items-vision .items-div {
+    background-color: #2C3455;
+}
+
+.home__page-items-machine .items-div {
+    background-color: #373155;
+}
+
+.home__page-items-natural .items-div {
+    background-color: #274255;
+}
+
+.home__page-items-robotics .items-div {
+    background-color: #3D413F;
+}
+
+@media screen and (min-width: 376px) {
+    #home-page {
+        margin-top: 247px;
+        margin-left: 169px;
+    }
+
+    .home__page-title {
+        width: 490px;
+
+        & &-h1 {
+            line-height: 56px;
+            font-size: 48px;
+            width: 490px;
+        }
+
+        & &-p {
+            width: 496px;
+        }
+    }
+
+    .home__page-items {
+        width: 496px;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .items {
+        width: 240px;
+        height: 218px;
+
+        & &-div img {
+            width: auto;
+            height: 28px;
+        }
+
+        & p {
+            width: 209px;
+            height: 66px;
+        }
+    }
+
+}
+
+@media screen and (min-width:1440px) {
+    #home-page {
+        margin-top: 159px;
+        margin-left: 152px;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: flex-start;
+        gap: 109px;
+
+    }
+
+    .home__page-title {
+
+        width: 467px;
+        justify-content: flex-start;
+        margin: 0;
+
+        & &-h1 {
+            width: 467px;
+        }
+
+        & &-p {
+            margin-top: 24px;
+            width: 467px;
+        }
+    }
+
+    .home__page-items {
+        
+        width: 560px;
+        height: 511px;
+        margin: 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+
+
+    }
+
+    .items {
+        width: 268px;
+        height: 240px;
+
+        & &-div {
+            width: 64px;
+            height: 64px;
+
+            & img {
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        & p {
+            width: 236px;
+            height: 72px;
+            line-height: 24px;
+            margin-bottom: 24px;
+            font-size: 16px;
+        }
+    }
+
+}
